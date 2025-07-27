@@ -529,7 +529,6 @@ async def add_transaction(
                     transaction.date = transaction.date.split('T')[0]
                 # Handle timestamp format
                 elif transaction.date.isdigit() and len(transaction.date) > 8:
-                    from datetime import datetime
                     timestamp = int(transaction.date)
                     if len(transaction.date) == 13:  # milliseconds
                         timestamp = timestamp / 1000
@@ -613,7 +612,6 @@ async def update_transaction(
                     transaction_update.date = transaction_update.date.split('T')[0]
                 # Handle timestamp format
                 elif transaction_update.date.isdigit() and len(transaction_update.date) > 8:
-                    from datetime import datetime
                     timestamp = int(transaction_update.date)
                     if len(transaction_update.date) == 13:  # milliseconds
                         timestamp = timestamp / 1000

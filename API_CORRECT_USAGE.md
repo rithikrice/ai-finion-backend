@@ -264,12 +264,15 @@ curl -H "Cookie: sessionid=8888888888" \
 
 ### Create Transaction
 ```bash
+**Note:** The `date` field is optional. If not provided, the API will use today's date. The date should be in `YYYY-MM-DD` format (e.g., "2024-07-15").
+
 curl -X POST https://finion-backend-119044850014.asia-south1.run.app/api/transactions \
   -H "Content-Type: application/json" \
   -H "Cookie: sessionid=8888888888" \
   -d '{
     "amount": 1500,
     "narration": "Coffee at Starbucks",
+    "date": "2024-07-15",
     "type": "expense"
   }'
 ```
