@@ -1,0 +1,24 @@
+{
+  "baseUrl": "$UriConstant.baseUrl",
+  "endpoints": {
+    "spendByCategory": {
+      "method": "GET",
+      "path": "/spend_by_category",
+      "params": ["from_date", "to_date"],
+      "headers": {
+        "Cookie": "sessionid=YOUR_SESSION_ID"
+      }
+    },
+    "askAI": {
+      "method": "POST",
+      "path": "/ask-ai",
+      "headers": {
+        "Content-Type": "application/json",
+        "Cookie": "sessionid=YOUR_SESSION_ID"
+      },
+      "bodyTemplate": {
+        "query": ""
+      }
+    }
+  }
+}
